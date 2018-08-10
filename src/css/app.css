@@ -528,9 +528,12 @@ html {
   }
 
   .display-4{
-      font-size: 50%;
+      font-size:3rem;
   }
 
+  .theory {
+    top:-40px;
+  }
 }
 
 
@@ -540,6 +543,7 @@ html {
     width: 330px;
     margin-left: 0px;
   }
+
 }
 
 @media all and (max-width: 320px) {
@@ -572,5 +576,9 @@ html {
   }
   .MuiFormControl-root-1 {
     width: 90%;
+  }
+
+  .theory{
+    top:-45px;
   }
 }

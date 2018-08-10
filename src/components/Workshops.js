@@ -3,9 +3,11 @@ import { Logout, Footer, PlusIcon, months } from './util';
 import Sidebar from 'react-sidebar';
 import Workshop from './Workshop';
 import {Navigation }from './util'
-import '../css/app.css';
-import '../css/index.css';
 import '../css/bootstrap.min.css'
+import '../css/index.css';
+import '../css/app.css';
+
+
 
 
 

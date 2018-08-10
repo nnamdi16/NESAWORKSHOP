@@ -28,17 +28,17 @@ export const Banner = (props) => (
 
 export const Navigation = (props) => (
     <nav aria-label="breadcrumb n_navigation">
-             <div className="container">
+             
              <ol style={{
             "background": "rgba(245,139,51,0.6)"
         }} className="breadcrumb">
            
-           <li className="breadcrumb-item"><NavLink to="/">Home</NavLink></li>
-            <li className="breadcrumb-item"><NavLink to="/contact">Add Workshop</NavLink></li>
-            <li className="breadcrumb-item active" aria-current="page"><NavLink to="/Workshops">Workshops</NavLink></li>
+           <li className="breadcrumb-item"><NavLink className="nav_text" to="/">Home</NavLink></li>
+            <li className="breadcrumb-item"><NavLink  className="nav_text" to="/contact">Add Workshop</NavLink></li>
+            <li className="breadcrumb-item active" aria-current="page"><NavLink className="nav_text" to="/Workshops">Workshops</NavLink></li>
            
         </ol>
-             </div>
+        
      </nav>
 )
 

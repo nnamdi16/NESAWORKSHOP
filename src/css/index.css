@@ -6,6 +6,13 @@ body {
     cursor: pointer;
 }
 
+.nav_text{
+    font-size: 13px;
+}
+
+.breadcrumb .breadcrumb-item{
+    font-size:13px;
+}
 .text-success {
     cursor: pointer;
 }
@@ -546,7 +553,10 @@ iframe {
     .shadow-textarea{
         width:345px;
     }
+
     
+
+        
 }
 
 .n_footer {
@@ -606,6 +616,9 @@ body {
     
     .shadow-textarea{
         width:340px;
+    }
+    .active{
+        font-size: 10px;
     }
     }
 
