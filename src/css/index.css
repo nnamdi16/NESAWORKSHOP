@@ -1,0 +1,732 @@
+body {
+    font-family: 'Archivo', sans-serif
+}
+
+.n_logout {
+    cursor: pointer;
+}
+
+.text-success {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+li {
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+}
+
+
+
+small {
+    font-size: 120%;
+}
+
+.workshop-post {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.n_eventImage {
+    background-image: url('../img/vic_and_lola.jpg');
+    width: 100%;
+    height: 347px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.date-time {
+    color: #F58B3B;
+}
+
+.date-time,
+.status {
+    font-size: 20px;
+}
+
+.border-top {
+    border-top: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.add-content {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #3498DB;
+    box-shadow: -1px -1px 7px 2px #3498DB;
+}
+
+.n_add-sign {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+.n_navbar {
+    height: 240px;
+    background-color: #D8D8D8;
+    box-shadow: inset 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0px 0px 20px 0.4 #dfdfdf;
+    -webkit-box-shadow: inset 0px 0px 20px 0.4 #dfdfdf;
+    background-image: linear-gradient( #D8D8D8, #dfdfdf 15%, #dfdfdf 85%, /*#f58b3b 95%,*/
+    #D8D8D8);
+}
+
+.n_barDate {
+    color: #F58B3B;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 100px;
+}
+
+.n_barPrice {
+    color: #F58B3B;
+    font-family: 'Archivo', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1px;
+    /* margin-top: 20px; */
+}
+
+.n_SectionDate {
+    font-family: 'Archivo', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.n_SectionAdd {
+    color: #4A90E2;
+    font-size: 20px;
+}
+
+.n_image {
+    width: 960px;
+}
+
+.n_article {
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: 'Archivo', sans-serif;
+    line-height: 35px;
+}
+
+.n_socialMedia {
+    height: 40px;
+    width: 40px;
+}
+
+.n_barTitle {
+    font-family: 'Archivo', sans-serif;
+    font-size: 32px;
+}
+
+.n_apply {
+    border: 1px solid #F58B3B;
+    border-radius: 40px;
+    background-color: #F58B3B;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Archivo', sans-serif;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+.n_header {
+    background-color: #F58B3B;
+    height: 10px;
+}
+
+.n_pathClip {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73%);
+}
+
+.n_social {
+    margin: auto 20px;
+}
+
+.n_copywrite {
+    font-size: 1.3rem;
+    color: rgb(12, 12, 12);
+    font-family: 'Archivo', sans-serif;
+    /* float: right; */
+}
+
+.n_phone,
+.n_description {
+    font-size: 1.3rem;
+    color: rgb(102, 101, 101);
+    font-family: 'Archivo', sans-serif;
+    text-align: justify;
+}
+
+.n_container {
+    background-color: rgba(216, 216, 216);
+    height: 300px;
+    padding-top: 6rem;
+    -webkit-clip-path: polygon(0 0, 100% 31%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 31%, 100% 100%, 0 100%)
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+/* Workshop css */
+
+.n_powerButton {
+    background-color: #F58B3B;
+}
+
+/* .n_titleWorkshop{
+    width:1200px;
+} */
+
+.workshop-title {
+    cursor: pointer;
+}
+
+.o-theme-color {
+    color: #f58b3b;
+    font-size: 24px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+}
+
+.n_barSection {
+    border-top: 1px solid rgba(0, 0, 0, 0.35);
+    width: auto;
+    /* height: 120px; */
+}
+
+.n_eventDate {
+    color: #f58b3b;
+    font-family: 'Nunito', sans-serif;
+}
+
+.n_event {
+    font-size: 26px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+}
+
+.n_footerReset {
+    width: 50%;
+}
+
+.n_eventAdd {
+    color: #F1C40F;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* 
+.n_footer {
+    margin-top: 200px;
+} */
+
+.n_footerAdd {
+    background-color: #3498DB;
+    width: 70px;
+    border-radius: 50px;
+    height: 70px;
+    box-shadow: 2px 2px 2px 3px #3498DB;
+}
+
+.n_applicationStatus {
+    color: #2ECC71;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+}
+
+.n_published {
+    color: #2ECC71;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* .n_plusPosition {
+    font-size: 60px;
+    padding: 25px 25px 25px 25px;
+    text-align: center;
+    font-size: 28px;
+    color: white;
+} */
+
+@media(max-width:480px) {
+    .n_footerAdd {
+        padding-left: 0px;
+    }
+    .n_footerReset {
+        margin-left: 100px;
+    }
+    .n_navbar {
+        height: 350px;
+    }
+    .n_barDate {
+        font-size: 16px;
+        padding: 5px;
+        margin-top: 0px;
+    }
+    .n_barPrice {
+        font-size: 18px;
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    .n_barTitle {
+        font-size: 24px;
+    }
+    /* des-container {
+        height: 500px;
+        width: 100%;
+    } */
+    .n_eventImage {
+        height: 247px;
+    }
+    .n_container {
+        height: 500px;
+    }
+    .n_description {
+        margin-top: 25%;
+    }
+    .workshop-title {
+        font-size: 20px;
+    }
+    .application-status {
+        font-size: 80%;
+    }
+    .date-time,
+    .status {
+        font-size: 80%;
+    }
+    .setDate {
+        font-size: 80%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+}
+
+.borderline {
+    /* border:1px solid black; */
+    width: 100%;
+}
+
+.mapouter {
+    overflow: hidden;
+    height: 230px;
+    width: 381px;
+}
+
+.gmap_canvas {
+    background: none !important;
+    height: 230px;
+    width: 381px;
+}
+
+.n_applyPrice {
+    margin-top: 10%;
+}
+
+iframe {
+    width: 381px;
+    height: 230px;
+}
+
+.n_main {
+    padding: 0% 5%;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .n_container {
+        height: 350px;
+    }
+    iframe {
+        width: 340px;
+        height: 190px;
+    }
+    .mapouter {
+        overflow: hidden;
+        height: 190px;
+        width: 340px;
+    }
+    .gmap_canvas {
+        background: none !important;
+        height: 190px;
+        width: 340px;
+    }
+}
+
+@media all and (min-width: 764px) and (max-width: 1000px) {
+    .n_container {
+        height: 400px;
+    }
+    .n_eventImage {
+        height: 200px;
+    }
+    iframe {
+        width: 230px;
+        height: 190px;
+    }
+    .mapouter {
+        overflow: hidden;
+        height: 190px;
+        width: 230px;
+    }
+    .gmap_canvas {
+        background: none !important;
+        height: 190px;
+        width: 230px;
+    }
+    small {
+        font-size: 80%;
+    }
+    textarea {
+        min-width: 100%;
+    }
+
+    .n_titleWorkshop{
+        width:690px;
+    }
+    
+    .shadow-textarea{
+        width:690px;
+    }
+}
+
+
+@media all and (min-width: 600px) and (max-width: 760px) {
+    .n_article {
+        text-align: justify;
+    }
+    .n_applyPrice {
+        padding-left: 10%;
+    }
+    .n_apply {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+    /* .n_main {
+        padding: 0px 0px;
+    } */
+    iframe {
+        width: 510px;
+        height: 347px;
+    }
+    .mapouter {
+        overflow: hidden;
+        height: 347px;
+        width: 510px;
+    }
+    .gmap_canvas {
+        background: none !important;
+        height: 347px;
+        width: 510px;
+    }
+    .n_barPrice {
+        display: block;
+        margin-left: left;
+        margin-right: auto;
+        margin-top: 0px;
+        padding-left: 20px;
+    }
+    .n_navbar {
+        width: 100%;
+    }
+    .n_barDate,
+    .n_barTitle {
+        margin-bottom: 1px;
+    }
+    .n_footer {
+        display: flex;
+    }
+    .n_social {
+        order: 2;
+    }
+    .n_applyPrice {
+        order: 1;
+        margin-bottom: 10px;
+        margin-left: 25%;
+    }
+    /* .des-container {
+        height: 600px;
+    } */
+    .n_eventImage {
+        height: 247px;
+    }
+    small {
+        font-size: 80%;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .n_container {
+        height: 600px;
+    }
+    .n_description {
+        margin-top: 35%;
+    }
+    iframe {
+        width: 345px;
+        height: 230px;
+    }
+    .mapouter {
+        overflow: hidden;
+        height: 230px;
+        width: 345px;
+    }
+    .gmap_canvas {
+        background: none !important;
+        height: 230px;
+        width: 345px;
+    }
+    .n_barDate {
+        font-size: 16px;
+        padding: 5px;
+        margin: 0px;
+        text-align:center;
+    }
+    .n_eventImage {
+        width: 100%;
+        height: 247px;
+    }
+    .workshop-title {
+        font-size: 20px;
+    }
+    .application-status {
+        font-size: 80%;
+    }
+    .date-time,
+    .status {
+        font-size: 80%;
+    }
+    .setDate {
+        font-size: 80%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    .n_article {
+        font-size: 110%;
+    }
+    .n_SectionDate {
+        font-size: 100%;
+    }
+    small {
+        font-size: 80%;
+    }
+    .n_barPrice {
+        margin-top: 0px;
+    }
+    .mt-5 {
+        margin-top: 0px;
+    }
+
+    a {
+        color: white;
+        font-size: 18px;
+    }
+
+    .n_titleWorkshop{
+        width:345px;
+    }
+
+    .shadow-textarea{
+        width:345px;
+    }
+    
+}
+
+.n_footer {
+    margin-top: 10px;
+}
+
+body {
+    max-width: auto;
+}
+
+.n_apply {
+    font-size: 16px;
+    padding: 10px 30px;
+}
+
+/* .n_main {
+    padding: 0px 0px;
+} */
+
+.n_barPrice {
+    display: block;
+    /* margin-top: 10%; */
+}
+
+.n_footer {
+    display: flex;
+}
+
+.n_social {
+    order: 2;
+}
+
+.n_applyPrice {
+    order: 1;
+    margin-bottom: 10px;
+    margin-left: 20%;
+}
+
+.n_article {
+    text-align: justify;
+}
+
+.workshop-post {
+    width: 100%;
+}
+
+.n_workShopbody {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+@media all and (max-width: 360px) {
+    .n_titleWorkshop{
+        width:330px;
+    }
+    
+    .shadow-textarea{
+        width:340px;
+    }
+    }
+
+
+@media all and (max-width: 320px) {
+    .n_container {
+        margin-top: 35%;
+    }
+    iframe {
+        width: 290px;
+        height: 200px;
+    }
+    .mapouter {
+        overflow: hidden;
+        height: 200px;
+        width: 290px;
+        margin-left: 0px;
+    }
+    .gmap_canvas {
+        background: none !important;
+        height: 200px;
+        width: 290px;
+    }
+    /* .date-time,
+    .status {
+        font-size: 20px;
+    } */
+    .n_eventImage {
+        width: 100%;
+        height: 250px;
+    }
+    body {
+        width: auto;
+    }
+    .n_apply {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+    
+    .n_barPrice {
+        display: block;
+        /*margin: 0 0 0 auto;*/
+        padding-left: 0px;
+    }
+    .n_footer {
+        display: flex;
+        height: 0px;
+    }
+    .n_social {
+        order: 2;
+    }
+    .n_applyPrice {
+        order: 1;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+    .workshop-post {
+        width: 100%;
+    }
+    .n_workShopbody {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .n_eventImage {
+        width: 100%;
+        height: 147px;
+    }
+    .n_article {
+        letter-spacing: 0.5px;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'Archivo', sans-serif;
+        text-align: justify;
+        line-height: 35px;
+    }
+    .workshop-title {
+        font-size: 80%;
+    }
+    .application-status {
+        font-size: 80%;
+    }
+    .date-time,
+    .status {
+        font-size: 80%;
+    }
+    .setDate {
+        font-size: 60%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    li {
+        font-size: 80%;
+    }
+    .o-theme-color {
+        font-size: 150%;
+    }
+    .n_navbar {
+        width: 320px;
+    }
+    small {
+        font-size: 80%;
+    }
+    .navbar {
+        width: 320px;
+    }
+
+    a {
+        color: white;
+        font-size: 15px;
+    }
+
+    .n_titleWorkshop{
+        width:295px;
+    }
+    
+    .shadow-textarea{
+        width:305px;
+    }
+}
+
+
