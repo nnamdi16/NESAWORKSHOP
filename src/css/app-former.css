@@ -413,7 +413,7 @@ body {
         align-items: unset;
     }
     .form-group {
-        width: 150px;
+        /* width: 150px; */
         /* margin: 0 5px; */
     }
     .form-inline .form-control {

@@ -345,7 +345,7 @@ publishWorkshop = (e)=> {
 
                             <br />
 
-                            <div className="form-group shadow-textarea">
+                            <div className="shadow-textarea form-group ">
                                 <textarea defaultValue={this.state.workshop.description} name="description" placeholder="Description" className="form-control n_titleWorkshop o-input-theme z-depth-1" id=" exampleFormControlTextarea1 " rows="10">
                                 
                                 </textarea>
