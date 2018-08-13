@@ -124,6 +124,36 @@ textarea::placeholder {
     font-size: 20px;
 }
 
+@media(max-width:768px){
+   
+    textarea{
+        width:100%;
+    }
+
+    
+}
+@media(max-width:480px) {
+    input::placeholder {
+        height: 26px;
+        width: 267px;
+        opacity: 0.27;
+        color: #000000;
+        font-family: 'Archivo', sans-serif;
+        ;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.58px;
+        line-height: 26px;
+        padding-left: 20px;
+    }
+    .contactInput{
+        margin-top:20px;
+    }
+
+    textarea::placeholder {
+        font-size: 15px;
+}
+}
 @media all and (max-width: 375px) {
     input::placeholder {
         height: 26px;
@@ -148,29 +178,6 @@ textarea::placeholder {
     }
 
     
-}
-
-@media(max-width:480px) {
-    input::placeholder {
-        height: 26px;
-        width: 267px;
-        opacity: 0.27;
-        color: #000000;
-        font-family: 'Archivo', sans-serif;
-        ;
-        font-size: 15px;
-        font-weight: 500;
-        letter-spacing: 0.58px;
-        line-height: 26px;
-        padding-left: 20px;
-    }
-    .contactInput{
-        margin-top:20px;
-    }
-
-    textarea::placeholder {
-        font-size: 15px;
-}
 }
 
 @media(max-width:320px) {
@@ -198,11 +205,3 @@ textarea::placeholder {
     
 }
 
-@media(max-width:768px){
-   
-    textarea{
-        width:100%;
-    }
-
-    
-}

@@ -3,6 +3,16 @@
 body {
   /* height: 800px; */
   overflow-x: hidden;
+  
+}
+
+#mymodal {
+  z-index: 10;
+}
+
+.newModal {
+  width: 800px;
+  height: 800px;
 }
 
 html {
@@ -282,7 +292,7 @@ html {
 }
 
 .image-a {
-  background-image: url("../images/bg-image.jpg");
+  background-image: url("../img/bg-image.jpg");
   background-size: cover;
   width: 100%;
   height: 600px;
@@ -438,7 +448,7 @@ html {
     align-items: unset;
   }
   .form-group {
-    width: 150px;
+    /* width: 150px; */
     /* margin: 0 5px; */
   }
   .form-inline .form-control {
@@ -456,7 +466,6 @@ html {
   .hero-animation {
     display: none;
   }
-
   .n_notify {
     width: 100%;
   }
@@ -505,7 +514,6 @@ html {
   }
   .display-4 {
     margin-top: 1rem;
-    
   }
   .upcoming {
     height: 16rem;
@@ -526,14 +534,13 @@ html {
   .MuiFormControl-root-1 {
     width: 90%;
   }
-
-  .display-4{
-      font-size: 50%;
+  .display-4 {
+    font-size: 3rem;
   }
-
+  .theory {
+    top: -40px;
+  }
 }
-
-
 
 @media all and (max-width: 360px) {
   .form-inline {
@@ -572,5 +579,8 @@ html {
   }
   .MuiFormControl-root-1 {
     width: 90%;
+  }
+  .theory {
+    top: -45px;
   }
 }

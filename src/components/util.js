@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import '../css/header.css';
 import '../css/del.css';
-
+import '../css/modalbox.css'
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -26,20 +26,60 @@ export const Banner = (props) => (
     </div>
 )
 
+// export const ModalForm = (props) => (
+// //    <div className="modal-sec-overlay" id="mymodal">
+// //         <div className="modal-box modal-small" id="modal-box">
+// //             {/* <!-- Modal Close Button -->  */}
+// //             <button id="close-modal" data-target="mymodal" className="close-btn">x</button>
+// //             {/* <!-- Modal Title --> */}
+// //             <div className="modal-title">Error Message</div>
+// //             {/* <!-- Modal content --> */}
+// //             <div className="modal-content">
+// //                 <p>Check your network connection</p>
+// //             </div>
+// //         </div> 
+// <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+//   <div className="modal-dialog modal-dialog-centered" role="document">
+//     <div className="modal-content">
+//       <div className="modal-header">
+//         <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
+//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//           <span aria-hidden="true">&times;</span>
+//         </button>
+//       </div>
+//       <div className="modal-body">
+//         ...
+//       </div>
+//       <div className="modal-footer">
+//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+//         <button type="button" class="btn btn-primary">Save changes</button>
+//       </div>
+//     </div>
+//   </div>
+//   { console.log('modal form is executing')}
+// </div>
+        
+
+
+    
+// )
+
 export const Navigation = (props) => (
-    <nav aria-label="breadcrumb n_navigation">
-             <div className="container">
+    <div class="container">
+        <nav aria-label="breadcrumb n_navigation">
+             
              <ol style={{
             "background": "rgba(245,139,51,0.6)"
         }} className="breadcrumb">
            
-           <li className="breadcrumb-item"><NavLink to="/">Home</NavLink></li>
-            <li className="breadcrumb-item"><NavLink to="/contact">Add Workshop</NavLink></li>
-            <li className="breadcrumb-item active" aria-current="page"><NavLink to="/Workshops">Workshops</NavLink></li>
+           <li className="breadcrumb-item"><NavLink className="nav_text" to="/">Home</NavLink></li>
+            <li className="breadcrumb-item"><NavLink  className="nav_text" to="/contact">Add Workshop</NavLink></li>
+            <li className="breadcrumb-item active" aria-current="page"><NavLink className="nav_text" to="/Workshops">Workshops</NavLink></li>
            
         </ol>
-             </div>
+        
      </nav>
+    </div>
 )
 
 export const Footer = (props) => (
@@ -80,7 +120,7 @@ export const Logout = (props) => (
 
 export const Top = ({ top: { startDate, endDate, time, title, fee }, initPayment, seatsLeft }) => {
     return (
-        <div style={{ "marginTop": "85px" }} className=" n_navbar n_pathClip">
+        <div style={{ "marginTop": "85px" }} className=" col-12 n_navbar n_pathClip">
             <div className="container">
                 <div className="row d-flex justify-content-between n_main">
                     <div className=" mt-4">
@@ -156,12 +196,12 @@ export const BodyText = ({ description }) => (
 export const SocialMedia = ({ fee, seatsLeft }) => (
     <div className="container">
         <div className="row n_footer">
-            <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 n_social d-flex justify-content-around mt-5">
-                <img src={facebook} className="p-2 n_socialMedia" />
+            <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 n_social d-flex justify-content-around">
+            <img src={facebook} className="p-2 n_socialMedia" />
                 <img src={twitter} className="p-2 n_socialMedia" />
                 <img src={whatsapp} className="p-2 n_socialMedia" />
             </div>
-            <div className="col-md-5 col-lg-5 d_apply justify-content-center mx-5">
+            <div className="col-md-5 col-lg-5 d-flex d_apply justify-content-center mx-5">
 
                 <button disabled={(fee === 0) || (seatsLeft < 1)} style={{
                     "visibility": fee ? "visible" : "hidden"
@@ -270,9 +310,9 @@ export const IndexPageWorkshop = ({ workshop: { startDate, endDate, day, time, t
             <div className="col-lg-6 col-sm-6 col-md-6">
                 <p className="date">{startDate || <Skeleton width={100} />}&nbsp;&nbsp; {endDate || <Skeleton width={100} />} &nbsp;{time || <Skeleton width={50} />}</p>
                 <p className="course dark-grey truncate">{title || <Skeleton width={300} />}</p>
-                <p className="grey truncate">{description || <Skeleton />}</p>
+                <p className="grey truncate mt-lg-2">{description || <Skeleton />}</p>
 
-                <span style={{
+                <span className="mt-lg-4" style={{
                     "display": Boolean(fee) ? "block" : "none"
                 }}>
                     <span className="fee">

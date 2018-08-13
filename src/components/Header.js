@@ -39,7 +39,7 @@ class Header extends Component {
             <nav style={{
                 "background": (this.state.translucent) ? "rgba(245,139,59,0.7)" : "rgba(248,228,213,1)"
             }} className="navbar fixed-top navbar-expand-lg navbar-light pl-0 pr-0 py-0">
-                <div id="o-logo"> <NavLink id="o-logo-correct-skew" className="navbar-brand px-4 py-4 my-0 mr-4" href="#" to="/index">TechWorkshops<br /><span>By Nesa</span></NavLink>
+                <div id="o-logo"> <NavLink id="o-logo-correct-skew" className="navbar-brand px-4 py-4 my-0 mr-4" href="#" to="/about">TechWorkshops<br /><span>By Nesa</span></NavLink>
                 </div>
 
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -50,14 +50,14 @@ class Header extends Component {
                 <div className="collapse navbar-collapse  ml-4 pl-4" id="navbarSupportedContent">
                     <ul className="nav navbar-nav navbar-right ml-auto ">
 
-                        <NavLink to="/contact">  <li className="nav-item pr-4 pl-4 mr-4 ml-4">
+                        <NavLink to="/">  <li className="nav-item pr-4 pl-4 mr-4 ml-4">
                             <span className="nav-link pr-4 pl-4 mr-4 ml-4">Home</span>
                         </li></NavLink>
-                        <NavLink to="/workshops">
+                        {/* <NavLink to="/workshops">
                             <li className="nav-item pr-4 pl-4 mr-4 ml-4">
                                 <span className="nav-link pr-4 pl-4 mr-4 ml-4">Courses</span>
                             </li>
-                        </NavLink>
+                        </NavLink> */}
                         {/*<NavLink to="/workshops">
                             <li className="nav-item pr-4 pl-4 mr-4 ml-4">
                                 <span className="nav-link pr-4 pl-4 mr-4 ml-4">Workshops</span>

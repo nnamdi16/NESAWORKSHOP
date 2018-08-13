@@ -9,6 +9,7 @@ import Workshops from './components/Workshops';
 import ClientWorkshop from './components/ClientWorkshop';
 import Applicants from './components/Applicants';
 import Index from './components/Index';
+import AdminLogin from './components/AdminLogin'
 
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -31,6 +32,7 @@ class App extends Component {
             <Route exact path="/workshops" component={Workshops} />
             <Route path="/workshops/:workshopId/applicants" component={Applicants}/>
             <Route exact path="/workshops/:workshopId" component={Workshops} />
+            <Route exact path="/login" component={AdminLogin} />
 
             <Route path="/answers/:questionId" component={PostAnswer} />
             <Route path="/postquestion" component={PostQuestion} />

@@ -1,0 +1,12 @@
+Outstanding jobs
+---------------------------------------client/workshops -------------------------------------------------------
+- Making the calendar dynamic
+- Making the map dynamic
+- Making the banner dynamic
+
+-------------------------------------Login Page----------------------------------------------------------------
+-Link the login page to the  workshop page
+
+
+-------------------------------------Contact page---------------------------------------------------------------
+-Implement the froala editor on the text-area

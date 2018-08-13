@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { Logout, Footer, PlusIcon, months } from './util';
+import { Logout, Footer, PlusIcon, months, ModalForm } from './util';
 import Sidebar from 'react-sidebar';
 import Workshop from './Workshop';
-import {Navigation }from './util'
-import '../css/app.css';
-import '../css/index.css';
+import {Navigation}from './util'
 import '../css/bootstrap.min.css'
+import '../css/index.css';
+import '../css/app.css';
+
+
+
 
 
 
@@ -37,22 +40,37 @@ class Workshops extends Component {
         this.state = {
             workshops: [{}, {}, {}, {}],
             sidebarOpen: false
+            // modalOn: false
 
         }
 
     }
-
+    // handleModal=()=>{
+    //     this.setState({
+    //         modalOn: true
+    //     }, ()=>{
+    //         console.log(this.state.modalOn);
+    //     })
+    // }
     componentDidMount() {
-        if(window.firebase){
-            let db = window.firebase.firestore();
-            // const firestore = firebase.firestore();
-            const settings = { timestampsInSnapshots: true };
-            db.settings(settings);
-            this.db = db;
-            this.getWorkshops()
-        } else {
-            alert("I will break your head ")
-        }
+        let db = window.firebase.firestore();
+        // const firestore = firebase.firestore();
+        const settings = { timestampsInSnapshots: true };
+        db.settings(settings);
+        this.db = db;
+        this.getWorkshops()
+
+        // if(window.firebase){
+        //     let db = window.firebase.firestore();
+        //     // const firestore = firebase.firestore();
+        //     const settings = { timestampsInSnapshots: true };
+        //     db.settings(settings);
+        //     this.db = db;
+        //     this.getWorkshops()
+        // } else {
+        //     console.log('I should execute');
+        //     this.handleModal();
+        // }
         
     }
 
@@ -188,7 +206,10 @@ class Workshops extends Component {
     render() {
         return (
             <div>
-
+                {/* <div className="newModal">{(this.state.modalOn===true) && (
+                    <ModalForm />
+                )}
+                </div> */}
                 <Logout /><br />
                 <div className="container">
                                     <Navigation />
@@ -198,7 +219,7 @@ class Workshops extends Component {
 
                         <Workshop viewWorkshop={() => { this.viewWorkshop(workshop) }} viewApplicants={() => { this.viewApplicants(workshop.id,workshop.title) }} editWorkshop={() => { this.editWorkshop(workshop) }} key={i} workshop={workshop} />
                     )}
-                    <PlusIcon />
+                    {/* <PlusIcon /> */}
 
                 </div>
                 <Footer />
