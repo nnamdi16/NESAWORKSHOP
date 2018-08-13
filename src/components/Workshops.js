@@ -219,7 +219,7 @@ class Workshops extends Component {
 
                         <Workshop viewWorkshop={() => { this.viewWorkshop(workshop) }} viewApplicants={() => { this.viewApplicants(workshop.id,workshop.title) }} editWorkshop={() => { this.editWorkshop(workshop) }} key={i} workshop={workshop} />
                     )}
-                    <PlusIcon />
+                    {/* <PlusIcon /> */}
 
                 </div>
                 <Footer />

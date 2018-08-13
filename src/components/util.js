@@ -65,7 +65,8 @@ export const Banner = (props) => (
 // )
 
 export const Navigation = (props) => (
-    <nav aria-label="breadcrumb n_navigation">
+    <div class="container">
+        <nav aria-label="breadcrumb n_navigation">
              
              <ol style={{
             "background": "rgba(245,139,51,0.6)"
@@ -78,6 +79,7 @@ export const Navigation = (props) => (
         </ol>
         
      </nav>
+    </div>
 )
 
 export const Footer = (props) => (
