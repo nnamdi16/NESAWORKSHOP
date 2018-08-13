@@ -7,6 +7,41 @@ import Header from './Header'
 import {Button, ButtonToolbar, Modal} from 'reactstrap'
 import { Top, BodyContainer, Footer, SocialMedia } from "./util"
 import '../css/bootstrap.min.css';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root')
+
+const customStyles = {
+    content:{
+        top:'50%',
+        left:'50%',
+        right:'auto',
+        bottom:'auto',
+        marginRight:'-50%',
+        transform:'translate(-50%,-50%)'
+    }
+};
+
+const inputStyles = {
+    "border": "none",
+    "borderBottom": "1px solid #f58b3b",
+    "outline":"none",
+}
+
+const buttonStyles = {
+    "border": "1px solid #f58b3b",
+    "color": "#f58b3b",
+    "background": "#fff",
+    "borderRadius": "10px",
+    "outline":"none"
+}
+
+const closeButtonStyle = {
+    "width": "50%",
+    "height": "50%",
+    "borderRadius": "25%",
+    "float":"right"
+}
 
 class ClientWorkshop extends Component {
     constructor(props) {
@@ -44,7 +79,7 @@ let dLocation = "22 joy avenue ajao estate lagos";
         fee,
         no_of_seats,
         applications,
-        show:true
+        modalIsOpen:false,
     }
 
     console.log(this.state)
@@ -66,14 +101,20 @@ let dLocation = "22 joy avenue ajao estate lagos";
 
     }
 
-      handleClose = ()=>{
-    this.setState({ show: false });
-  }
+    openModal = () => {
+        this.setState({modalIsOpen:true});
+    }
 
-  handleShow = ()=>{
-    this.setState({ show: true });
-  }
+    afterOpenModal = () => {
+        //references are now sync'd and can be opened
+        this.subtitle.style.color = '#f56111';
+    }
 
+    closeModal = () => {
+        this.setState({modalIsOpen:false});
+    }
+
+   
     initPayment = ()=>{
     //     const email = prompt("Please enter email");
     //     if((email === null) || email === "") {
@@ -120,11 +161,38 @@ let dLocation = "22 joy avenue ajao estate lagos";
     render() {
         return (
             <div>
-                <Header />
-                <Top initPayment={this.initPayment} top={this.state.top} seatsLeft={this.state.no_of_seats - this.state.applications} />
-                <BodyContainer bottom={this.state.bottom}  />
-                <SocialMedia fee={this.state.fee} seatsLeft={this.state.no_of_seats - this.state.applications} />
+                 <Header />
+                <Top openModal={this.openModal} initPayment={this.initPayment} top={this.state.top} seatsLeft={this.state.no_of_seats - this.state.applications} />
+                <BodyContainer bottom={this.state.bottom} />
+                <SocialMedia openModal={this.openModal} fee={this.state.fee} seatsLeft={this.state.no_of_seats - this.state.applications} />
                 <Footer />
+                <div>
+                    {/*<button onClick={this.openModal}>Open Modal</button>*/}
+                    <Modal
+                        isOpen={this.state.modalIsOpen}
+                        onAfterOpen={this.afterOpenModal}
+                        onRequestClose={this.closeModal}
+                        style={customStyles}
+                        contentLabel="Modal for registeration"
+                    >
+{/*
+                        <div style={closeButtonStyle}><button onClick={this.closeModal}>X</button>
+                        </div>*/}
+                        <h4 ref={subtitle => this.subtitle = subtitle}>Fill out details</h4><br />
+                        <form onSubmit={this.initPayment}>
+                            <div style={{"color":"#f58b3b"}}>Fullname</div>
+                            <p><input  name="fullname" required type="text" style={inputStyles} /></p>
+                            <div style={{"color":"#f58b3b"}}>Phone</div>
+                            <p><input name="phone" required type="tel" style={inputStyles}  /></p>
+                            <div style={{"color":"#f58b3b"}}>Email</div>
+                            <p><input  name="email" required type="email" style={inputStyles} /></p>
+                            <div style={{"float":"right"}}><button type="submit" style={buttonStyles}>Submit</button></div>
+
+                        </form>
+                    </Modal>
+                </div>
+                {/*gjjghjg*/}
+                
                 {/*<ButtonToolbar>
         <Button bsStyle="primary" onClick={this.handleShow}>
           Launch demo modal

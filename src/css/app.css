@@ -5,6 +5,15 @@ body {
   overflow-x: hidden;
 }
 
+#mymodal{
+  z-index:10;
+}
+
+.newModal{
+  width:800px;
+  height:800px;
+}
+
 html {
   overflow-x: hidden;
 }

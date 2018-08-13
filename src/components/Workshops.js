@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Logout, Footer, PlusIcon, months } from './util';
+import { Logout, Footer, PlusIcon, months, ModalForm } from './util';
 import Sidebar from 'react-sidebar';
 import Workshop from './Workshop';
-import {Navigation }from './util'
+import {Navigation}from './util'
 import '../css/bootstrap.min.css'
 import '../css/index.css';
 import '../css/app.css';
+
 
 
 
@@ -38,12 +39,19 @@ class Workshops extends Component {
         // }
         this.state = {
             workshops: [{}, {}, {}, {}],
-            sidebarOpen: false
+            sidebarOpen: false,
+            modalOn: false
 
         }
 
     }
-
+    handleModal=()=>{
+        this.setState({
+            modalOn: true
+        }, ()=>{
+            console.log(this.state.modalOn);
+        })
+    }
     componentDidMount() {
         if(window.firebase){
             let db = window.firebase.firestore();
@@ -53,7 +61,8 @@ class Workshops extends Component {
             this.db = db;
             this.getWorkshops()
         } else {
-            alert("I will break your head ")
+            console.log('I should execute');
+            this.handleModal();
         }
         
     }
@@ -190,7 +199,10 @@ class Workshops extends Component {
     render() {
         return (
             <div>
-
+                <div className="newModal">{(this.state.modalOn===true) && (
+                    <ModalForm />
+                )}
+                </div>
                 <Logout /><br />
                 <div className="container">
                                     <Navigation />
