@@ -310,9 +310,9 @@ export const IndexPageWorkshop = ({ workshop: { startDate, endDate, day, time, t
             <div className="col-lg-6 col-sm-6 col-md-6">
                 <p className="date">{startDate || <Skeleton width={100} />}&nbsp;&nbsp; {endDate || <Skeleton width={100} />} &nbsp;{time || <Skeleton width={50} />}</p>
                 <p className="course dark-grey truncate">{title || <Skeleton width={300} />}</p>
-                <p className="grey truncate">{description || <Skeleton />}</p>
+                <p className="grey truncate mt-lg-2">{description || <Skeleton />}</p>
 
-                <span style={{
+                <span className="mt-lg-4" style={{
                     "display": Boolean(fee) ? "block" : "none"
                 }}>
                     <span className="fee">

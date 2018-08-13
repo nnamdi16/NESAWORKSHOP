@@ -1,12 +1,13 @@
 body {
 	margin: 0;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	/* overflow-y: auto; */
 }
 
+/* 
 html {
 	overflow-y: hidden;
-}
+} */
 
 body a {
 	transition: 0.5s all;
@@ -14,14 +15,14 @@ body a {
 	-moz-transition: 0.5s all;
 	-o-transition: 0.5s all;
 	-ms-transition: 0.5s all;
-	font-weight: 400;
-	font-family: 'Titillium Web', sans-serif;
 }
 
 .login-maintop {
 	background-image: url(../img/sign_up_bg.jpg);
 	background-repeat: no-repeat;
 	width: auto;
+	font-weight: 400;
+	font-family: 'Titillium Web', sans-serif;
 }
 
 input[type="button"],
@@ -37,12 +38,13 @@ input[type="email"] {
 	font-family: 'Titillium Web', sans-serif;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5, */
+
+.admin_title {
 	margin: 0;
 	font-weight: 400;
 	transition: 0.5s all;
@@ -66,9 +68,9 @@ label {
 	margin: 0;
 }
 
-img {
+/* img {
 	width: 100%;
-}
+} */
 
 @font-face {
 	font-family: 'Snippet';
@@ -146,7 +148,7 @@ img {
 
 /* input[type="submit"] { */
 
-button {
+.admin_button {
 	font-size: 20px;
 	font-weight: 500;
 	text-align: center;
@@ -234,7 +236,7 @@ button {
 
 /*--footer--*/
 
-.footer {
+/* .footer {
 	padding: 5em 0;
 	text-align: center;
 }
@@ -253,7 +255,7 @@ button {
 
 .footer p a:hover {
 	text-decoration: none;
-}
+} */
 
 /*--/footer--*/
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../css/style.css';
+import '../css/login.css';
 import '../css/font-awesome.css';
 
 
@@ -67,9 +67,9 @@ class AdminLogin extends Component{
 		<div>
 		<section className="login-maintop">
 		<div className="login-main">
-		<header><h1>nesa workshop admin login</h1></header>
+		<header><h1 className="admin_title">nesa workshop admin login</h1></header>
 		<div className="login-form">
-		<h2>Sign Up Form</h2>
+		<h2 className="admin_title">Sign Up Form</h2>
 		<form onSubmit = {this.login}>
 				<span><i className="fa fa-user-o" aria-hidden="true"></i></span>
 				<input type="text" name="username" placeholder="Username" required=""/>
@@ -78,7 +78,7 @@ class AdminLogin extends Component{
 				<span><i className="fa fa-unlock-alt" aria-hidden="true"></i></span>
 				<input type="password" name="password" placeholder="Password" required=""/>
 				{/* <input type="submit" value="login"/> */}
-				<button>Login</button>
+				<button className="admin_button">Login</button>
 			</form>
 			<div className="login-password">
 				<span><a href="#">forgot password</a></span>
