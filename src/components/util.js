@@ -195,11 +195,11 @@ export const SocialMedia = ({ fee, seatsLeft }) => (
     <div className="container">
         <div className="row n_footer">
             <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 n_social d-flex justify-content-around">
-            <img src="./img/facebook.png" className="p-2 n_socialMedia" />
-                <img src="./img/twitter.png" className="p-2 n_socialMedia" />
-                <img src="./img/whatsapp.png" className="p-2 n_socialMedia" />
+            <img src={facebook} className="p-2 n_socialMedia" />
+                <img src={twitter} className="p-2 n_socialMedia" />
+                <img src={whatsapp} className="p-2 n_socialMedia" />
             </div>
-            <div className="col-md-5 col-lg-5 d_apply justify-content-center mx-5">
+            <div className="col-md-5 col-lg-5 d-flex d_apply justify-content-center mx-5">
 
                 <button disabled={(fee === 0) || (seatsLeft < 1)} style={{
                     "visibility": fee ? "visible" : "hidden"

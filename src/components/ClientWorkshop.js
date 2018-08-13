@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import '../css/header.css';
 import Header from './Header'
 // import '../inline.js';
-import {Button, ButtonToolbar, Modal} from 'reactstrap'
+import {Button, ButtonToolbar} from 'reactstrap'
 import { Top, BodyContainer, Footer, SocialMedia } from "./util"
 import '../css/bootstrap.min.css';
 import Modal from 'react-modal';
