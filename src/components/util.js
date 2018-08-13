@@ -118,7 +118,7 @@ export const Logout = (props) => (
 
 export const Top = ({ top: { startDate, endDate, time, title, fee }, initPayment, seatsLeft }) => {
     return (
-        <div style={{ "marginTop": "85px" }} className=" n_navbar n_pathClip">
+        <div style={{ "marginTop": "85px" }} className=" col-12 n_navbar n_pathClip">
             <div className="container">
                 <div className="row d-flex justify-content-between n_main">
                     <div className=" mt-4">
@@ -194,10 +194,10 @@ export const BodyText = ({ description }) => (
 export const SocialMedia = ({ fee, seatsLeft }) => (
     <div className="container">
         <div className="row n_footer">
-            <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 n_social d-flex justify-content-around mt-5">
-                <img src={facebook} className="p-2 n_socialMedia" />
-                <img src={twitter} className="p-2 n_socialMedia" />
-                <img src={whatsapp} className="p-2 n_socialMedia" />
+            <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 n_social d-flex justify-content-around">
+            <img src="./img/facebook.png" className="p-2 n_socialMedia" />
+                <img src="./img/twitter.png" className="p-2 n_socialMedia" />
+                <img src="./img/whatsapp.png" className="p-2 n_socialMedia" />
             </div>
             <div className="col-md-5 col-lg-5 d_apply justify-content-center mx-5">
 

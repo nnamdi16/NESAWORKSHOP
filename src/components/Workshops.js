@@ -39,31 +39,38 @@ class Workshops extends Component {
         // }
         this.state = {
             workshops: [{}, {}, {}, {}],
-            sidebarOpen: false,
-            modalOn: false
+            sidebarOpen: false
+            // modalOn: false
 
         }
 
     }
-    handleModal=()=>{
-        this.setState({
-            modalOn: true
-        }, ()=>{
-            console.log(this.state.modalOn);
-        })
-    }
+    // handleModal=()=>{
+    //     this.setState({
+    //         modalOn: true
+    //     }, ()=>{
+    //         console.log(this.state.modalOn);
+    //     })
+    // }
     componentDidMount() {
-        if(window.firebase){
-            let db = window.firebase.firestore();
-            // const firestore = firebase.firestore();
-            const settings = { timestampsInSnapshots: true };
-            db.settings(settings);
-            this.db = db;
-            this.getWorkshops()
-        } else {
-            console.log('I should execute');
-            this.handleModal();
-        }
+        let db = window.firebase.firestore();
+        // const firestore = firebase.firestore();
+        const settings = { timestampsInSnapshots: true };
+        db.settings(settings);
+        this.db = db;
+        this.getWorkshops()
+
+        // if(window.firebase){
+        //     let db = window.firebase.firestore();
+        //     // const firestore = firebase.firestore();
+        //     const settings = { timestampsInSnapshots: true };
+        //     db.settings(settings);
+        //     this.db = db;
+        //     this.getWorkshops()
+        // } else {
+        //     console.log('I should execute');
+        //     this.handleModal();
+        // }
         
     }
 
@@ -199,10 +206,10 @@ class Workshops extends Component {
     render() {
         return (
             <div>
-                <div className="newModal">{(this.state.modalOn===true) && (
+                {/* <div className="newModal">{(this.state.modalOn===true) && (
                     <ModalForm />
                 )}
-                </div>
+                </div> */}
                 <Logout /><br />
                 <div className="container">
                                     <Navigation />
