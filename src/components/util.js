@@ -26,43 +26,43 @@ export const Banner = (props) => (
     </div>
 )
 
-export const ModalForm = (props) => (
-//    <div className="modal-sec-overlay" id="mymodal">
-//         <div className="modal-box modal-small" id="modal-box">
-//             {/* <!-- Modal Close Button -->  */}
-//             <button id="close-modal" data-target="mymodal" className="close-btn">x</button>
-//             {/* <!-- Modal Title --> */}
-//             <div className="modal-title">Error Message</div>
-//             {/* <!-- Modal content --> */}
-//             <div className="modal-content">
-//                 <p>Check your network connection</p>
-//             </div>
-//         </div> 
-<div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div className="modal-dialog modal-dialog-centered" role="document">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div className="modal-body">
-        ...
-      </div>
-      <div className="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-  { console.log('modal form is executing')}
-</div>
+// export const ModalForm = (props) => (
+// //    <div className="modal-sec-overlay" id="mymodal">
+// //         <div className="modal-box modal-small" id="modal-box">
+// //             {/* <!-- Modal Close Button -->  */}
+// //             <button id="close-modal" data-target="mymodal" className="close-btn">x</button>
+// //             {/* <!-- Modal Title --> */}
+// //             <div className="modal-title">Error Message</div>
+// //             {/* <!-- Modal content --> */}
+// //             <div className="modal-content">
+// //                 <p>Check your network connection</p>
+// //             </div>
+// //         </div> 
+// <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+//   <div className="modal-dialog modal-dialog-centered" role="document">
+//     <div className="modal-content">
+//       <div className="modal-header">
+//         <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
+//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//           <span aria-hidden="true">&times;</span>
+//         </button>
+//       </div>
+//       <div className="modal-body">
+//         ...
+//       </div>
+//       <div className="modal-footer">
+//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+//         <button type="button" class="btn btn-primary">Save changes</button>
+//       </div>
+//     </div>
+//   </div>
+//   { console.log('modal form is executing')}
+// </div>
         
 
 
     
-)
+// )
 
 export const Navigation = (props) => (
     <nav aria-label="breadcrumb n_navigation">

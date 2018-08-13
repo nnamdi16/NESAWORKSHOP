@@ -282,7 +282,7 @@ publishWorkshop = (e)=> {
                       <div className="container">
                       <form onSubmit={(e) => { this.handleWorkshopSubmit(e, 'DRAFT') }} id="o-form" className="mr-0">
                             <div className="form-group ">
-                                <input defaultValue={this.state.workshop.title} name="title" type="text" className="form-control n_titleWorkshopo-input-theme o-input-modify-size" id="inputAddress" placeholder="Workshop title" />
+                                <input defaultValue={this.state.workshop.title} name="title" type="text" className="form-control n_titleWorkshop o-input-theme o-input-modify-size" id="inputAddress" placeholder="Workshop title" />
                             </div><br />
                             <div className="form-row">
                                 <div className="form-group col-sm-3">
@@ -347,7 +347,6 @@ publishWorkshop = (e)=> {
 
                             <div className="shadow-textarea form-group ">
                                 <textarea defaultValue={this.state.workshop.description} name="description" placeholder="Description" className="form-control n_titleWorkshop o-input-theme z-depth-1" id=" exampleFormControlTextarea1 " rows="10">
-                                
                                 </textarea>
                             </div>
                             {/* <EditorComponent/> */}
