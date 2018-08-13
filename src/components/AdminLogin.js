@@ -69,7 +69,7 @@ class AdminLogin extends Component{
 		<div className="login-main">
 		<header><h1 className="admin_title">nesa workshop admin login</h1></header>
 		<div className="login-form">
-		<h2 className="admin_title">Sign Up Form</h2>
+		<h2 className="admin_title">Login</h2>
 		<form onSubmit = {this.login}>
 				<span><i className="fa fa-user-o" aria-hidden="true"></i></span>
 				<input type="text" name="username" placeholder="Username" required=""/>
