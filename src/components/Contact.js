@@ -20,6 +20,22 @@ class Contact extends Component {
         // const checkProps = "workshop" in this.props.location.state;
         // console.log(checkProps);
         // console.log(this.props.location.state === undefined)
+        console.log(this.props);
+        const that = this;
+        window.firebase.auth().onAuthStateChanged(function(user) {
+			if (user) {
+			  // User is signed in.
+			  console.log("there is a user")
+			  console.log(user);
+			} else {
+			  // No user is signed in.
+			  console.log("No user");
+              that.props.history.push('/')
+
+			}
+		  })
+
+
         this.performUpdate = false;
         this.savedId = undefined;
         console.log(this.props)
@@ -63,7 +79,6 @@ class Contact extends Component {
                     venue: undefined,
                     no_of_seats: undefined,
                     description: undefined
-
                 },
                 avatar: "",
                 isUploading: false,
@@ -175,6 +190,18 @@ publishWorkshop = (e)=> {
                 })
 }
 
+    logout = (e) => {
+        e.preventDefault();
+        const that = this;
+        window.firebase.auth().signOut().then(function () {
+            // Sign-out successful.
+            that.props.history.push('/')
+        }).catch(function (error) {
+            // An error happened.
+            alert('you have not successful');
+        });
+    }
+
 
     saveToFirestore = (db, performUpdate, data) => {
         let { venue, title, description, startDate, endDate, bannerUrl, time, morningOrEvening, fee,
@@ -271,7 +298,7 @@ publishWorkshop = (e)=> {
     render() {
         return (
             <div id="top">
-                <Logout />
+                <Logout logout={this.logout} />
                 <div id="o-contents">
 
                     <div id="o-body">

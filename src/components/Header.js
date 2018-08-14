@@ -39,7 +39,7 @@ class Header extends Component {
             <nav style={{
                 "background": (this.state.translucent) ? "rgba(245,139,59,0.7)" : "rgba(248,228,213,1)"
             }} className="navbar fixed-top navbar-expand-lg navbar-light pl-0 pr-0 py-0">
-                <div id="o-logo"> <NavLink id="o-logo-correct-skew" className="navbar-brand px-4 py-4 my-0 mr-4" href="#" to="/about">TechWorkshops<br /><span>By Nesa</span></NavLink>
+                <div id="o-logo"> <NavLink id="o-logo-correct-skew" className="navbar-brand px-4 py-4 my-0 mr-4"  to="/">TechWorkshops<br /><span>By Nesa</span></NavLink>
                 </div>
 
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

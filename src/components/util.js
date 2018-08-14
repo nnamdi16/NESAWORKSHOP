@@ -17,7 +17,7 @@ import { NavLink } from 'react-router-dom';
 import facebook from '../img/facebook.png'
 import twitter from '../img/twitter.png'
 import whatsapp from '../img/whatsapp.png'
-import logout from '../img/power-button.png'
+import logoutLogo from '../img/power-button.png'
 
 
 export const Banner = (props) => (
@@ -106,19 +106,19 @@ export const Footer = (props) => (
 )
 
 
-export const Logout = (props) => (
+export const Logout = ({logout}) => (
     <div>
         <div id="o-top-line"></div>
         <div className="container"><br />
             <div className="row">
                 <div className="col-sm-10"></div>
-                <h2 className="col-sm-2 o-logout">Logout<img className="pl-3 n_logout" src={logout}/></h2><br /><br />
+                <h2  className="col-sm-2 o-logout">Logout<img onClick={logout} className="pl-3 n_logout" src={logoutLogo}/></h2><br /><br />
             </div>
         </div><br />
     </div>
 )
 
-export const Top = ({ top: { startDate, endDate, time, title, fee }, initPayment, seatsLeft }) => {
+export const Top = ({ top: { startDate, endDate, time, title, fee }, openModal, seatsLeft }) => {
     return (
         <div style={{ "marginTop": "85px" }} className=" col-12 n_navbar n_pathClip">
             <div className="container">
@@ -130,7 +130,7 @@ export const Top = ({ top: { startDate, endDate, time, title, fee }, initPayment
                     <div className="n_barPrice mt-5">
                         <button disabled={(fee === 0) || (seatsLeft < 1)} style={{
                             "visibility": fee ? "visible" : "hidden"
-                        }} onClick={initPayment} className="n_apply">
+                        }} onClick={openModal} className="n_apply">
                             <span style={{
                                 "fontSize": "1.1em",
                                 "display": ((seatsLeft < 1) && (fee !== 0)) ? "none" : "block"
@@ -193,7 +193,7 @@ export const BodyText = ({ description }) => (
     </div>
 )
 
-export const SocialMedia = ({ fee, seatsLeft }) => (
+export const SocialMedia = ({ fee, seatsLeft, openModal }) => (
     <div className="container">
         <div className="row n_footer">
             <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 n_social d-flex justify-content-around">
@@ -203,7 +203,7 @@ export const SocialMedia = ({ fee, seatsLeft }) => (
             </div>
             <div className="col-md-5 col-lg-5 d-flex d_apply justify-content-center mx-5">
 
-                <button disabled={(fee === 0) || (seatsLeft < 1)} style={{
+                <button onClick={openModal} disabled={(fee === 0) || (seatsLeft < 1)} style={{
                     "visibility": fee ? "visible" : "hidden"
                 }} className="n_apply mx-5 mt-5">
                     <span style={{

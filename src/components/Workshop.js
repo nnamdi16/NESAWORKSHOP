@@ -6,17 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 
 class Workshop extends Component {
-    constructor(props) {
-        super(props)
-        
-        // this.state = {
-        //     id,
-        //     startDate,
-        //     endDate,
-        //     time
-        // }
 
-    }
 
 
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Logout, Footer, PlusIcon, months, ModalForm } from './util';
 import Sidebar from 'react-sidebar';
 import Workshop from './Workshop';
-import {Navigation}from './util'
+import { Navigation } from './util'
 import '../css/bootstrap.min.css'
 import '../css/index.css';
 import '../css/app.css';
@@ -17,31 +17,23 @@ import '../css/app.css';
 class Workshops extends Component {
     constructor(props) {
         super(props)
-        console.log(this.props)
-        // this.state = {
-        //     workshops: [
-        //         {
-        //             id:"8ynh",
-        //             title: "React and Redux Fundamentals",
-        //             day: "JUNE 13",
-        //             time: "10AM - 1PM",
-        //             status: "DRAFT",
-        //             applications: "3 Applications"
-        //         },
-        //         {
-        //             id:"23dre",
-        //             title: "Angular 6 Development Fundamentals",
-        //             day: "JULY 3",
-        //             time: "8AM - 12 NOON",
-        //             status: "PUBLISHED",
-        //             applications: "5 Applications"
-        //         }]
-        // }
+
+        const that = this;
+        window.firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+                console.log("there is a user")
+                console.log(user);
+            } else {
+                // No user is signed in.
+                console.log("No user");
+                that.props.history.push('/')
+
+            }
+        })
         this.state = {
             workshops: [{}, {}, {}, {}],
             sidebarOpen: false
-            // modalOn: false
-
         }
 
     }
@@ -71,7 +63,20 @@ class Workshops extends Component {
         //     console.log('I should execute');
         //     this.handleModal();
         // }
-        
+
+    }
+
+    logout = (e) => {
+        e.preventDefault();
+        console.log("login you out")
+        const that = this;
+        window.firebase.auth().signOut().then(function () {
+            // Sign-out successful.
+            that.props.history.push('/')
+        }).catch(function (error) {
+            // An error happened.
+            alert('you have not successful');
+        });
     }
 
     getWorkshops = () => {
@@ -185,8 +190,8 @@ class Workshops extends Component {
         });
     }
 
-    viewApplicants = (workshopId,workshopTitle, i) => {
-        this.props.history.push(`/workshops/${workshopId}/applicants`,{
+    viewApplicants = (workshopId, workshopTitle, i) => {
+        this.props.history.push(`/workshops/${workshopId}/applicants`, {
             workshopTitle
         });
     }
@@ -210,14 +215,14 @@ class Workshops extends Component {
                     <ModalForm />
                 )}
                 </div> */}
-                <Logout /><br />
+                <Logout logout={this.logout} /><br />
                 <div className="container">
-                                    <Navigation />
+                    <Navigation />
 
                     <h1 className="o-theme-color px-4"> Workshop</h1>
                     {this.state.workshops.map((workshop, i) =>
 
-                        <Workshop viewWorkshop={() => { this.viewWorkshop(workshop) }} viewApplicants={() => { this.viewApplicants(workshop.id,workshop.title) }} editWorkshop={() => { this.editWorkshop(workshop) }} key={i} workshop={workshop} />
+                        <Workshop viewWorkshop={() => { this.viewWorkshop(workshop) }} viewApplicants={() => { this.viewApplicants(workshop.id, workshop.title) }} editWorkshop={() => { this.editWorkshop(workshop) }} key={i} workshop={workshop} />
                     )}
                     {/* <PlusIcon /> */}
 

@@ -9,6 +9,20 @@ class Applicants extends Component {
     constructor(props) {
         super(props)
 
+        const that = this;
+        window.firebase.auth().onAuthStateChanged(function(user) {
+			if (user) {
+			  // User is signed in.
+			  console.log("there is a user")
+			  console.log(user);
+			} else {
+			  // No user is signed in.
+			  console.log("No user");
+              that.props.history.push('/')
+
+			}
+		  })
+
 
         const id = this.props.match.params.workshopId;
     const { location: { state: { workshopTitle } } } = this.props;
@@ -53,6 +67,19 @@ class Applicants extends Component {
         if (this.id !== 'undefined') {
             this.getApplicants(this.id);
         }
+    }
+
+    logout = (e) => {
+        e.preventDefault();
+        console.log("logging you out")
+        const that = this;
+        window.firebase.auth().signOut().then(function () {
+            // Sign-out successful.
+            that.props.history.push('/')
+        }).catch(function (error) {
+            // An error happened.
+            alert('you have not successful');
+        });
     }
 
     filterApplicants = (e, searchItem) => {
@@ -109,7 +136,7 @@ class Applicants extends Component {
     render() {
         return (
             <div>
-                <Logout />
+                <Logout logout={this.logout} />
                 <div id="background" className="container">
                     <div className="row "><br /> <br />
                         <h1 className="col-md-6 sm-6">Applicants</h1><br /> <br />
@@ -120,7 +147,7 @@ class Applicants extends Component {
                     </div><br />
                     {this.state.applicants.map((applicant, i) => (
                         <div>
-                            <Applicant deleteApplicant={() => { this.deleteApplicant(applicant.id) }} key={i} applicant={applicant} />
+                            <Applicant key={i} deleteApplicant={() => { this.deleteApplicant(applicant.id) }} key={i} applicant={applicant} />
                             {/*<hr className="half-rule" />*/}
                         </div>
                     ))}

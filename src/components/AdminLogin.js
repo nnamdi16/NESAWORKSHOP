@@ -6,23 +6,7 @@ import '../css/font-awesome.css';
 
 
 class AdminLogin extends Component{
-	constructor(props){
-		super(props)
 
-		window.firebase.auth().onAuthStateChanged(function(user) {
-			if (user) {
-			  // User is signed in.
-			  alert("there is a user")
-			  console.log(user);
-			} else {
-			  // No user is signed in.
-			  alert("No user")
-
-			}
-		  })
-
-
-	}
 
 	// componentDidMount(){
 	// 	console.log("mounted")
@@ -46,15 +30,17 @@ class AdminLogin extends Component{
 		let email = e.target.email.value;
 		let password = e.target.password.value;
 		let username = e.target.username.value;
+		const that = this;
 		
 		window.firebase.auth().signInWithEmailAndPassword(email, password)
 		.then((res) => {
 			console.log("success",res);
+			that.props.history.push('/workshops')
 			//route admin to workshops page
 		})
 		.catch(
 			function(err) {
-				console.log(err.code);
+				console.log(err);
 				
 			}
 		)

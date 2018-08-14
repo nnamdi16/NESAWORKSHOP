@@ -80,6 +80,11 @@ let dLocation = "22 joy avenue ajao estate lagos";
         no_of_seats,
         applications,
         modalIsOpen:false,
+        messageModalOPen:false,
+        modal:{
+            title:"",
+            message:""
+        }
     }
 
     console.log(this.state)
@@ -113,25 +118,48 @@ let dLocation = "22 joy avenue ajao estate lagos";
     closeModal = () => {
         this.setState({modalIsOpen:false});
     }
+    
+    openMessageModal = (title,message)=>{
+
+        this.setState({
+            messageModalOPen:true,
+            modal:{title, message}
+        })
+    }
+
+    closeMessageModal =()=>{
+        this.setState({
+            messageModalOPen:false,
+            modal:{title:"",message:""}
+        })
+    }
+
 
    
-    initPayment = ()=>{
+    initPayment = (e)=>{
     //     const email = prompt("Please enter email");
     //     if((email === null) || email === "") {
     //         alert("Email field missing");
     //         return;
     // }
     //     const amount = this.state.top.fee;
+        e.preventDefault();
         const data = {
-            email:"osamaimafidon@gmail.com",
-            amount:25000000
+            "email": e.target.email.value,
+            "amount": this.state.top.fee,
+            "fullname":e.target.fullname.value,
+            "phone":e.target.phone.value,
+            "workshop_id":this.workshopId
         }
+        this.closeModal()
+
+        console.log(data)
         this.payWithPaystack(data)
 
     }
 
-    payWithPaystack = ({email, amount})=>{
-
+    payWithPaystack = ({ email, amount, fullname, phone, workshop_id })=>{
+        var that = this;
     var handler = window.PaystackPop.setup({
       key: 'pk_test_4edb6704ac9c9db84e986ca247970a5160fe5651',
       email,
@@ -139,20 +167,19 @@ let dLocation = "22 joy avenue ajao estate lagos";
       ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
       metadata: {
          custom_fields: [
-            {
-                display_name: "Samuel",
-                variable_name: "mobile_number",
-                value: +2348012345678,
-                workshop_id:this.workshopId
-            }
-         ]
+                    {
+                        fullname,
+                        phone,
+                        workshop_id
+                    }
+                ]
       },
       callback: function(response){
-          alert('success. transaction ref is ' + response.reference);
+          that.openMessageModal('success','Thank you for registering for this workshop')
           console.log(response)
       },
       onClose: function(){
-          alert('window closed');
+          that.closeMessageModal()
       }
     });
     handler.openIframe();
@@ -162,7 +189,7 @@ let dLocation = "22 joy avenue ajao estate lagos";
         return (
             <div>
                  <Header />
-                <Top openModal={this.openModal} initPayment={this.initPayment} top={this.state.top} seatsLeft={this.state.no_of_seats - this.state.applications} />
+                <Top openModal={this.openModal} top={this.state.top} seatsLeft={this.state.no_of_seats - this.state.applications} />
                 <BodyContainer bottom={this.state.bottom} />
                 <SocialMedia openModal={this.openModal} fee={this.state.fee} seatsLeft={this.state.no_of_seats - this.state.applications} />
                 <Footer />
@@ -185,11 +212,35 @@ let dLocation = "22 joy avenue ajao estate lagos";
                             <div style={{"color":"#f58b3b"}}>Phone</div>
                             <p><input name="phone" required type="tel" style={inputStyles}  /></p>
                             <div style={{"color":"#f58b3b"}}>Email</div>
-                            <p><input  name="email" required type="email" style={inputStyles} /></p>
+                            <p><input  name="email" required type="email" style={inputStyles} /></p><br />
                             <div style={{"float":"right"}}><button type="submit" style={buttonStyles}>Submit</button></div>
 
                         </form>
                     </Modal>
+
+                    {/*message modal*/}
+                    <Modal
+                        isOpen={this.messageModalOPen}
+                        onAfterOpen={this.afterOpenModal}
+                        onRequestClose={this.closeMessageModal}
+                        style={customStyles}
+                        contentLabel="Modal For successful payment"
+                    >
+
+                        <h4 ref={subtitle => this.subtitle = subtitle}>{this.state.modal.title}</h4><br />
+                        <p>{this.state.modal.message}</p>
+                        {/*<form onSubmit={this.initPayment}>
+                            <div style={{"color":"#f58b3b"}}>Fullname</div>
+                            <p><input  name="fullname" required type="text" style={inputStyles} /></p>
+                            <div style={{"color":"#f58b3b"}}>Phone</div>
+                            <p><input name="phone" required type="tel" style={inputStyles}  /></p>
+                            <div style={{"color":"#f58b3b"}}>Email</div>
+                            <p><input  name="email" required type="email" style={inputStyles} /></p><br />
+                            <div style={{"float":"right"}}><button type="submit" style={buttonStyles}>Submit</button></div>
+
+                        </form>*/}
+                    </Modal>
+                    {/*end message modal*/}
                 </div>
                 {/*gjjghjg*/}
                 
