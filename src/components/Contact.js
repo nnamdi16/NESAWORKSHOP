@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Logout, Footer, Navigation } from './util';
 import FileUploader from 'react-firebase-file-uploader';
 import '../css/index.css';
+import Editor from './editor.js'
 // import EditorComponent from './Froalaeditor';
 
 

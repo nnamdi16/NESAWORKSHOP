@@ -246,13 +246,13 @@ export const PlusIcon = () => (
 )
 
 export const Applicant = ({ applicant: { display_name, email, amount }, deleteApplicant, fiterApplicants }) => {
-    const inlineStyle = "col-xs-1";
+    const inlineStyle = "col-xs-1 p-3 mt-4";
     amount = (amount === 0) ? "free" : amount;
     const nairaClass = (amount === "free" || amount === undefined) ? "hide" : "show";
 
     return (
         <div style={{ "borderBottom": "1px solid #999" }} className="d-flex justify-content-between">
-            <div className="col-xs-11">
+            <div className="col-xs-11 p-3">
                 <p>
                     <span className="span2">{email || <Skeleton width={200} />}</span>
                     <br />
