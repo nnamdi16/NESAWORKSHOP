@@ -140,13 +140,13 @@ class Applicants extends Component {
                 <Logout logout={this.logout} />
                 <div id="background" className="container">
                     <div>
-                        <div className="d-flex flex-row">
+                        <div className="d-flex flex-row p-3">
                         <h1>Applicants</h1><br /> 
                         </div>
-                        <div className="d-flex n_searchItem flex-lg-row-reverse flex-md-row-reverse ">
+                        <div className="d-flex n_searchItem flex-lg-row-reverse flex-md-row-reverse p-3 ">
                         <input onChange={this.filterApplicants} className=" mt-0" type="search" id="input" placeholder="search" />
                         </div>
-                        <div className="d-flex flex-row">
+                        <div className="d-flex flex-row p-3">
                         <h2>{this.title}</h2>
                         </div>
                         <hr className="half-rule" />
