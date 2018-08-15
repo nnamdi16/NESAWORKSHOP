@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 // import { NavLink } from 'react-router-dom';
-import { Applicant, Logout } from './util'
-import '../css/applicants.css';
+import { Applicant, Logout } from './util';
 import '../css/bootstrap.min.css';
+import '../css/applicants.css';
+import '../css/index.css'
 
 class Applicants extends Component {
     constructor(props) {
@@ -121,7 +122,7 @@ class Applicants extends Component {
             .then(function () {
                 console.log("Document successfully deleted!");
                 const applicants = this.state.applicants.filter(function (applicant) {
-                    return applicant.id != id;
+                    return applicant.id !== id;
                 })
                 this.setState({
                     applicants
@@ -138,11 +139,16 @@ class Applicants extends Component {
             <div>
                 <Logout logout={this.logout} />
                 <div id="background" className="container">
-                    <div className="row "><br /> <br />
-                        <h1 className="col-md-6 sm-6">Applicants</h1><br /> <br />
-                        <input onChange={this.filterApplicants} className="col-md-6 col-md-4 col" type="search" id="input" placeholder="search" />
-                        <div></div>
-                        <h1 className="col-md-6 sm-6">{this.title}</h1>
+                    <div>
+                        <div className="d-flex flex-row">
+                        <h1>Applicants</h1><br /> 
+                        </div>
+                        <div className="d-flex n_searchItem flex-lg-row-reverse flex-md-row-reverse ">
+                        <input onChange={this.filterApplicants} className=" mt-0" type="search" id="input" placeholder="search" />
+                        </div>
+                        <div className="d-flex flex-row">
+                        <h2>{this.title}</h2>
+                        </div>
                         <hr className="half-rule" />
                     </div><br />
                     {this.state.applicants.map((applicant, i) => (

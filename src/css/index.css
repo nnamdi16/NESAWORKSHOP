@@ -6,13 +6,21 @@ body {
     cursor: pointer;
 }
 
-.nav_text{
+.nav_text {
     font-size: 13px;
 }
 
-.breadcrumb .breadcrumb-item{
-    font-size:13px;
+.breadcrumb .breadcrumb-item {
+    font-size: 13px;
 }
+.m_search{
+    width:565px;
+}
+.n_searchItem {
+    height: 60px;
+    
+}
+
 .text-success {
     cursor: pointer;
 }
@@ -33,8 +41,6 @@ a {
     color: white;
     font-size: 20px;
 }
-
-
 
 small {
     font-size: 120%;
@@ -186,8 +192,6 @@ small {
     -webkit-clip-path: polygon(0 0, 100% 31%, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 31%, 100% 100%, 0 100%)
 }
-
-
 
 /* ----------------------------------------------------------------------------------------------------------------- */
 
@@ -405,16 +409,13 @@ iframe {
     textarea {
         min-width: 100%;
     }
-
-    .n_titleWorkshop{
-        width:690px;
+    .n_titleWorkshop {
+        width: 690px;
     }
-    
-    .shadow-textarea{
-        width:690px;
+    .shadow-textarea {
+        width: 690px;
     }
 }
-
 
 @media all and (min-width: 600px) and (max-width: 760px) {
     .n_article {
@@ -427,7 +428,6 @@ iframe {
         font-size: 16px;
         padding: 10px 30px;
     }
-   
     iframe {
         width: 510px;
         height: 347px;
@@ -479,6 +479,7 @@ iframe {
 }
 
 @media all and (max-width: 375px) {
+    
     .n_container {
         height: 600px;
     }
@@ -503,7 +504,7 @@ iframe {
         font-size: 16px;
         padding: 5px;
         margin: 0px;
-        text-align:center;
+        text-align: center;
     }
     .n_eventImage {
         width: 100%;
@@ -540,23 +541,16 @@ iframe {
     .mt-5 {
         margin-top: 0px;
     }
-
     a {
         color: white;
         font-size: 18px;
     }
-
-    .n_titleWorkshop{
-        width:345px;
+    .n_titleWorkshop {
+        width: 345px;
     }
-
-    .shadow-textarea{
-        width:345px;
+    .shadow-textarea {
+        width: 345px;
     }
-
-    
-
-        
 }
 
 .n_footer {
@@ -608,20 +602,17 @@ body {
     padding-right: 0;
 }
 
-
 @media all and (max-width: 360px) {
-    .n_titleWorkshop{
-        width:330px;
+    .n_titleWorkshop {
+        width: 330px;
     }
-    
-    .shadow-textarea{
-        width:340px;
+    .shadow-textarea {
+        width: 340px;
     }
-    .active{
+    .active {
         font-size: 10px;
     }
-    }
-
+}
 
 @media all and (max-width: 320px) {
     .n_container {
@@ -657,7 +648,6 @@ body {
         font-size: 16px;
         padding: 10px 30px;
     }
-    
     .n_barPrice {
         display: block;
         /*margin: 0 0 0 auto;*/
@@ -725,19 +715,14 @@ body {
     .navbar {
         width: 320px;
     }
-
     a {
         color: white;
         font-size: 15px;
     }
-
-    .n_titleWorkshop{
-        width:295px;
+    .n_titleWorkshop {
+        width: 295px;
     }
-    
-    .shadow-textarea{
-        width:305px;
+    .shadow-textarea {
+        width: 305px;
     }
 }
-
-
